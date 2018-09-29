@@ -1,0 +1,42 @@
+https://journal.artfuldev.com/unit-testing-node-applications-with-typescript-using-mocha-and-chai-384ef05f32b2
+
+$ npm install ts-node --save-dev
+$ npm install typescript --save-dev
+$ npm install chai mocha ts-node @types/chai @types/mocha --save-dev
+
+
+Create folder src
+Create folder src/ts
+
+Create file hello-world.ts
+******************************************************
+export const hello = () => 'Hello world!'; 
+******************************************************
+
+Create file hello-world.spec.ts
+******************************************************
+import { hello } from './hello-world';
+import { expect } from 'chai';
+import 'mocha';
+
+describe('Hello function', () => {
+
+  it('should return hello world', () => {
+    const result = hello();
+    expect(result).to.equal('Hello world!');
+  });
+});
+******************************************************
+
+Create file package json
+******************************************************
+{
+  "scripts": {
+    "test": "mocha -r ts-node/register src/**/*.spec.ts"
+  }
+}
+******************************************************
+
+run tests
+
+$npm run test
