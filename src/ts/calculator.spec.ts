@@ -1,4 +1,4 @@
-import { calculator } from './hello-world';
+import { calculator } from './calculator';
 import { expect } from 'chai';
 import 'mocha';
 
