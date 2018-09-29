@@ -1,5 +1,14 @@
 https://journal.artfuldev.com/unit-testing-node-applications-with-typescript-using-mocha-and-chai-384ef05f32b2
 
+Create file package json
+******************************************************
+{
+  "scripts": {
+    "test": "mocha -r ts-node/register src/**/*.spec.ts"
+  }
+}
+******************************************************
+
 $ npm install ts-node --save-dev
 $ npm install typescript --save-dev
 $ npm install chai mocha ts-node @types/chai @types/mocha --save-dev
@@ -26,15 +35,6 @@ describe('Hello function', () => {
     expect(result).to.equal('Hello world!');
   });
 });
-******************************************************
-
-Create file package json
-******************************************************
-{
-  "scripts": {
-    "test": "mocha -r ts-node/register src/**/*.spec.ts"
-  }
-}
 ******************************************************
 
 run tests
