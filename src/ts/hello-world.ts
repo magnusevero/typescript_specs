@@ -1,1 +1,5 @@
-export const hello = () => 'Hello world!'; 
+export class calculator {
+    public add(a: number, b: number): number {
+        return a + b;
+    }
+}

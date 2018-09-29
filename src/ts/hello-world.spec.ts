@@ -1,11 +1,12 @@
-import { hello } from './hello-world';
+import { calculator } from './hello-world';
 import { expect } from 'chai';
 import 'mocha';
 
-describe('Hello function', () => {
 
-  it('should return hello world', () => {
-    const result = hello();
-    expect(result).to.equal('Hello world!');
+describe('Calculator add', () => {
+  var calc = new calculator();
+  it('should return 7 when adding 2 and 5', () => {
+    const result = calc.add(2, 5);
+    expect(result).to.equal(7);
   });
 });
