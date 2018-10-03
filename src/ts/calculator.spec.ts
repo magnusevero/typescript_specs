@@ -8,6 +8,11 @@ describe('Miniräknare', () => {
     expect(calc.add(2, 5)).to.equal(7);
   });
 
+  it('ska returnera 12 när man kör add på 7 och 5', () => {
+    expect(calc.add(7, 5)).to.equal(12);
+  });
+
+
   it('ska returnera 3 när man tar 6 minus 3', () => {
     expect(calc.subtract(6, 3)).to.equal(3);
   });
@@ -19,4 +24,4 @@ describe('Miniräknare', () => {
   it('ska returnera 2 när man tar 4 delat med 2', () => {
     expect(calc.divide(4, 2)).to.equal(2);
   });
-});
+}); 
